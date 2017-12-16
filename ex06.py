@@ -3,8 +3,8 @@ def caesar(string, key):
     alphabet = 'abcdefghijklmnopqrstuvwxyz'
     cipher = " "
     for i in string:
-            if i in alphabet:
-                    cipher += alphabet[(alphabet.index(i) + key) % len(alphabet)]
-                    return cipher
+        if i in alphabet:
+                    cipher = cipher + alphabet[(alphabet.index(i) + key) % len(alphabet)]
+    return cipher
 
 
