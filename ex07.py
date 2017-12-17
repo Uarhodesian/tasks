@@ -7,5 +7,8 @@
 def rotate(m):
     rm = []
     for i in range(0,len(m)):
-            rm.append([row[i] for row in reversed(m)])
-    return rm
+            rm.append([row[i] for row in m])           
+    #return rm 
+#[[7, 4, 1], [8, 5, 2], [8, 6, 3]]
+    for c in rm:
+            print(rm)
