@@ -4,14 +4,13 @@
 #     *Visualize the game.
 
 import random
-
 board = []
 for x in range(0,5):
-  board.append(["O"] * 5)
+ board.append(["*"] * 5)
 
 def print_board(board):
-  for row in board:
-    print (" ".join(row))
+    for row in board:
+        print (" ".join(row))
 
 print ("Let's play Battleship!")
 print_board(board)
@@ -33,6 +32,7 @@ for turn in range(4):
 	
 	if guess_row == ship_row and guess_col == ship_col:
 	  print ("Congratulations! You sunk my battleship!")
+	  print ("My ship was here: [" + str(ship_row) + "][" + str(ship_col) + "]")
 	  break
 	else:
 		if turn == 3:
