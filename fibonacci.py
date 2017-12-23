@@ -3,7 +3,24 @@
 #     (tip: use var1, var2 = raw_input("Enter two numbers here: ").split())
 #     *Visualize the game.
 
-def F(n):
-    if n == 0: return 0
-    elif n == 1: return 1
-    else: return F(n-1)+F(n-2)
+def recur_fibo(n):
+   """Recursive function to
+   print Fibonacci sequence"""
+   if n <= 1:
+       return n
+   else:
+       return(recur_fibo(n-1) + recur_fibo(n-2))
+
+# Change this value for a different result
+nterms = 10
+
+# uncomment to take input from the user
+#nterms = int(input("How many terms? "))
+
+# check if the number of terms is valid
+if nterms <= 0:
+   print("Plese enter a positive integer")
+else:
+   print("Fibonacci sequence:")
+   for i in range(nterms):
+       print(recur_fibo(i))
